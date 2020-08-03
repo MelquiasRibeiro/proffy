@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import './style.css'
 import Logo from '../../assets/logo.svg'
 import Landing from '../../assets/landing.svg'
@@ -22,22 +24,22 @@ const Home: React.FC = () => {
           />
 
           <div className="buttons-container">
-            <a href="/" className="study">
+            <Link to="/List" className="study">
               <img src={StudyIcon}  alt="study"/>
               Estudar
-            </a>
+            </Link>
 
-            <a href="/" className="give-classes">
+            <Link to="/" className="give-classes">
               <img src={GiveClassesIcon}  alt="study"/>
               Dar Aulas
-            </a>
+            </Link>
           </div>
 
           <span className="total-conections">
             Total de 200 conexões realizadas {" "}
             <img src={PurpleHeartIcon} alt=""/>
           </span>
-          
+
         </div>
     </div>
     );
