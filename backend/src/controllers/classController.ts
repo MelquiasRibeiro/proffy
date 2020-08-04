@@ -3,7 +3,7 @@ import db from '../database/connection';
 import convertHour from '../utils/convertHour';
 
 
-class CalssController {
+class ClassController {
 
   async index(req: Request, res: Response) {
     const filter = req.query;
@@ -105,4 +105,4 @@ class CalssController {
   }
 }
 
-export default CalssController;
+export default ClassController;
