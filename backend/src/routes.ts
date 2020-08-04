@@ -7,6 +7,7 @@ const routes = express.Router();
 
 routes.post('/classes',classController.store)
 
+routes.get('/classes',classController.index)
 
 
 
