@@ -24,12 +24,12 @@ const Home: React.FC = () => {
           />
 
           <div className="buttons-container">
-            <Link to="/List" className="study">
+            <Link to="/list" className="study">
               <img src={StudyIcon}  alt="study"/>
               Estudar
             </Link>
 
-            <Link to="/" className="give-classes">
+            <Link to="/register" className="give-classes">
               <img src={GiveClassesIcon}  alt="study"/>
               Dar Aulas
             </Link>
