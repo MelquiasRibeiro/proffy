@@ -15,8 +15,6 @@ const List: React.FC= () => {
   const [teachers,setTeachers] =useState([]) 
 
 
-  async function connect (){
-  }
 
 
   function handleCreateClass(e:FormEvent){
