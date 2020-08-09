@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './screens/Home/index';
+import GiveClass from './screens/GiveClasses/index';
 
 const Appstack = createStackNavigator();
 
@@ -17,6 +18,8 @@ const Routes = () => {
             }}
             >
                 <Appstack.Screen name="Home" component={Home}/>
+                <Appstack.Screen name="GiveClass" component={GiveClass}/>
+
 
             </Appstack.Navigator>
         </NavigationContainer>
