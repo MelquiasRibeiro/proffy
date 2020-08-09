@@ -1,12 +1,22 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View,ScrollView } from 'react-native';
 import styles from './styles';
 import Header from '../../components/Header';
+import TeacherItem from '../../components/TeacherItem';
 
 const TeacherList: React.FC = () => {
     return (
     <View style={styles.container}>
         <Header title="Proffys Disponíveis"/>
+        <ScrollView style={styles.scrollView} 
+        contentContainerStyle={{
+            paddingHorizontal:16,
+            paddingBottom:16,
+        }}
+        >
+        <TeacherItem/>
+        <TeacherItem/>
+        </ScrollView>
     </View>
     
 )}
