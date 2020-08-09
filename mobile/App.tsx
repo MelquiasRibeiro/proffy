@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import Routes from './src/routes';
+import AppStack from './src/routes/appStack';
 import {AppLoading} from 'expo'
 import { Archivo_400Regular, Archivo_700Bold} from '@expo-google-fonts/archivo';
 import  {Poppins_400Regular,Poppins_600SemiBold, useFonts } from '@expo-google-fonts/poppins';
@@ -21,7 +21,7 @@ if(!fontsLoaded){
   return (
     <>
     <StatusBar barStyle="light-content" backgroundColor="transparent"translucent/>
-    <Routes/>
+    <AppStack/>
   </>
   );
 }

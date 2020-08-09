@@ -11,8 +11,12 @@ import {RectButton} from 'react-native-gesture-handler'
 const  Home: React.FC = () => {
     
     const {navigate} = useNavigation()
+    
     function handlenavigatetogiveClasses(){
         navigate('GiveClass')
+    }
+    function handleNavigateToStudy(){
+        navigate('study')
     }
 
   return( 
@@ -25,11 +29,11 @@ const  Home: React.FC = () => {
                 </Text>
             </Text>
             <View style={styles.buttonsContainer}>
-                <RectButton style={[styles.button,styles.buttonSecodary]} onPress={handlenavigatetogiveClasses}>
+                <RectButton style={[styles.button,styles.buttonSecodary]} onPress={handleNavigateToStudy}>
                     <Image source={studyIcon}/>
                     <Text style={styles.buttonText} >Estudar</Text>
                 </RectButton>
-                <RectButton style={[styles.button,styles.buttonPrimary]} >
+                <RectButton style={[styles.button,styles.buttonPrimary]} onPress={handlenavigatetogiveClasses}>
                     <Image source={giveClassIcon}/>
                     <Text style={styles.buttonText}>Ensinar</Text>
                 </RectButton>
