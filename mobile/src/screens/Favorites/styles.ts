@@ -7,6 +7,12 @@ const styles =   StyleSheet.create({
     },
     scrollView:{
         marginTop:-60
+    },
+    message:{
+        fontFamily:'Archivo_700Bold',
+        color:'#6a6180',
+        fontSize:16,
+        alignSelf:"center"
     }
 })
 

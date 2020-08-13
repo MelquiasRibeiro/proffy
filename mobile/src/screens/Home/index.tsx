@@ -1,5 +1,5 @@
-import React from 'react';
-import { View,Text,Image,TouchableOpacity } from 'react-native';
+import React,{useState,useEffect} from 'react';
+import { View,Text,Image } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
 import Landing from '../../assets/images/landing.png';
@@ -7,9 +7,23 @@ import studyIcon from '../../assets/images/icons/study.png';
 import giveClassIcon from '../../assets/images/icons/give-classes.png';
 import Heart from '../../assets/images/icons/heart.png';
 import {RectButton} from 'react-native-gesture-handler'
+import api from '../../services/api';
 
 const  Home: React.FC = () => {
-    
+    const [connections,setConnections] =useState(0);
+
+
+    useEffect(() => {
+      api.get('/connections').then(response =>{
+        setConnections(response.data.total)
+    }  
+    )
+    .catch(error=>{
+        console.log(error)
+    }        
+    )
+      
+    }, [connections])
     const {navigate} = useNavigation()
     
     function handlenavigatetogiveClasses(){
@@ -38,7 +52,7 @@ const  Home: React.FC = () => {
                     <Text style={styles.buttonText}>Ensinar</Text>
                 </RectButton>
             </View>
-            <Text style={styles.totalConnections}>Total de 200 conexoes{' '}<Image source={Heart}/></Text>
+            <Text style={styles.totalConnections}>Total de {connections} conexoes{' '}<Image source={Heart}/></Text>
         </View>
     )
 }

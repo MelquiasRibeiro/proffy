@@ -93,9 +93,3 @@ const styles =   StyleSheet.create({
 })
 
 export default styles;
-// fontFamily:'Archivo_700Bold',
-// color:'#fff',
-// fontSize:24,
-// lineHeight:32,
-// maxWidth:160,
-// marginVertical:40,
